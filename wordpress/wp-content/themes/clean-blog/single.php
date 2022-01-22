@@ -10,7 +10,10 @@
   <!-- Page Header -->
   <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-      <header class="masthead" style="background-image: url('')">
+      <?php
+      $img = get_eye_catch_with_default();
+      ?>
+      <header class="masthead" style="background-image: url('<?php echo $img[0] ?>')">
         <div class="overlay"></div>
         <div class="container">
           <div class="row">
