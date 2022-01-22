@@ -5,7 +5,7 @@
   <?php get_header() ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
   <?php get_template_part('includes/header'); ?>
   <!-- Page Header -->
   <?php if (have_posts()) : ?>
