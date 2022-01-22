@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="http://localhost:8080/wp-content/themes/clean-blog/css/styles.css" rel="stylesheet" />
+
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -153,6 +155,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="http://localhost:8080/wp-content/themes/clean-blog/js/scripts.js"></script>
+
+    <?php wp_footer() ?>
 </body>
 
 </html>
