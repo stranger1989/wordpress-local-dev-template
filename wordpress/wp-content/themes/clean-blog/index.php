@@ -43,16 +43,31 @@
             <hr>
           <?php endwhile; ?>
           <!-- Pager-->
-          <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
-        </div>
-      <?php else : ?>
-        <p>Not Found Article</p>
-      <?php endif; ?>
+          <div class="clearfix">
+            <?php
+            $link = get_previous_posts_link('&larr; Newer post');
+            if ($link) {
+              $link = str_replace('<a', '<a class="btn btn-primary float-start"', $link);
+              echo $link;
+            }
+            ?>
 
+            <?php
+            $link = get_next_posts_link('Older post &rarr;');
+            if ($link) {
+              $link = str_replace('<a', '<a class="btn btn-primary float-end"', $link);
+              echo $link;
+            }
+            ?>
+          </div>
+        <?php else : ?>
+          <p>Not Found Article</p>
+        <?php endif; ?>
+
+        </div>
     </div>
-  </div>
-  <?php get_template_part('includes/footer') ?>
-  <?php get_footer() ?>
+    <?php get_template_part('includes/footer') ?>
+    <?php get_footer() ?>
 </body>
 
 </html>
