@@ -24,5 +24,6 @@
   ```zsh
   docker-compose down --rmi all --volumes --remove-orphans
   ```
+## Contact form
 
-
+You can create contact form via plugin.
